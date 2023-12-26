@@ -47,7 +47,7 @@ class WASPASDecision:
         row_labels = [f"A{i+1}" for i in range(self.data.shape[0])]
 
         # Menampilkan grafik melingkar untuk persentase bobot kriteria
-        st.subheader("\nGrafik Persentase Bobot Kriteria")
+        st.subheader("\nGrafik Persentase Bobot Kriteria:")
 
         # explode = [0.02 if t == "benefit" else 0.02 for t in self.tipeKriteria]
         explode = [0.02] * len(self.tipeKriteria)
@@ -70,7 +70,7 @@ class WASPASDecision:
         st.pyplot(fig)
 
         # Menampilkan grafik nilai kriteria setiap alternatif
-        st.subheader("\nGrafik Nilai Kriteria Setiap Alternatif")
+        st.subheader("\nGrafik Nilai Kriteria Setiap Alternatif:")
 
         # Transpose data untuk memudahkan plotting
         data_transposed = self.data.T
